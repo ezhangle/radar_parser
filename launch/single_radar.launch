@@ -1,0 +1,5 @@
+<launch>
+    <arg name="project" default="radar_parser"/>
+    <node pkg = "$(arg project)" type= "$(arg project)_publisher" name= "$(arg project)_publisher" output="screen" respawn="true"/>
+    <param name="serialPort" value="/dev/ttyACM0"/>
+</launch>
