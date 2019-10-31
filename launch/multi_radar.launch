@@ -1,11 +1,11 @@
 <launch>
 
     <group ns="radar_1">
-        <node pkg = "radar_omnipresense" type= "radar_publisher" name= "radar_1_data_and_services"  output="screen" respawn="true"/>
+        <node pkg = "$(arg project)" type= "$(arg project)_publisher" name= "$(arg project)_publisher" output="screen" respawn="true"/>
         <param name="serialPort" value="/dev/ttyACM0"/>
     </group>
     <group ns="radar_2">
-        <node pkg = "radar_omnipresense" type= "radar_publisher" name= "radar_2_data_and_services"  output="screen" respawn="true"/>
+        <node pkg = "$(arg project)" type= "$(arg project)_publisher" name= "$(arg project)_publisher" output="screen" respawn="true"/>
         <param name="serialPort" value="/dev/ttyACM1"/>
     </group>
 </launch>
